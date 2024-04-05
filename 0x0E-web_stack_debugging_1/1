@@ -1,0 +1,8 @@
+nginx: unrecognized service
+Nginx is not running. Starting Nginx service...
+nginx: unrecognized service
+grep: /etc/nginx/sites-available/default: No such file or directory
+Updating Nginx configuration to listen on port 80...
+sed: can't read /etc/nginx/sites-available/default: No such file or directory
+nginx: unrecognized service
+Nginx configuration updated successfully.

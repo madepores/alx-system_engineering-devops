@@ -1,0 +1,5 @@
+#!/bin/bash
+
+service nginx status | grep -q "not running" && service nginx start
+sed -i 's/.*listen.*80.*;/\tlisten 80;/g' /etc/nginx/sites-available/default
+service nginx reload

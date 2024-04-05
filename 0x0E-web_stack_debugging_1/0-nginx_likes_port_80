@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Check if Nginx service is running
+nginx_status=$(service nginx status)
+
+# If Nginx service is not running, start it
+if [[ $nginx_status != *"active (running)"* ]]; then
+    echo "Nginx is not running. Starting Nginx service..."
+    service nginx start
+fi
+
+# Check Nginx configuration to ensure it's listening on port 80
+nginx_config=$(grep -E "listen\s+80;" /etc/nginx/sites-available/default)
+
+# If Nginx configuration is missing, update it to listen on port 80
+if [[ -z $nginx_config ]]; then
+    echo "Updating Nginx configuration to listen on port 80..."
+    sed -i 's/.*listen.*80.*;/\tlisten 80;/g' /etc/nginx/sites-available/default
+    service nginx reload
+    echo "Nginx configuration updated successfully."
+else
+    echo "Nginx is already configured to listen on port 80."
+fi
