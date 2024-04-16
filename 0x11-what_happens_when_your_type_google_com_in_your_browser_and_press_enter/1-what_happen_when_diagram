@@ -1,0 +1,7 @@
+Computer Web server Database
+
+Web and application server takes the user input to be interpreted by the application server such as IP address, TCP/IP connection. In form the web server is a tool to handles HTTP/HTTPS request content.
+
+Application server runs in the back end of the web server to create dynamic information related to the business logic.
+
+Database management allows the programm to intract with the database using business logic for implementing the request.

@@ -1,0 +1,4 @@
+git pull https://github.com/alex/what-happens-when#the-g-key-is-pressed
+
+
+When you press the "g" key, the browser's auto-complete feature is activated, suggesting relevant URLs based on search history and other factors. As you type "google.com," the suggestions refine with each keystroke, and the browser may even anticipate and suggest the complete URL before you finish typing it.
